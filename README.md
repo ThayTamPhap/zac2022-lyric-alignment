@@ -1,3 +1,14 @@
+https://fb.com/groups/257768141347267/?multi_permalinks=1612676712523063
+
+Xin chào mọi người, mình xin đại diện cho team VTS-HTML chia sẻ solution cho track Lyric Alignment trong cuộc thi Zalo AI Challenge 2022 (Top 3 Private test). Tổng quan về solution của nhóm:
+- Tách vocal từ audio gốc
+- Xử lý noise trong datasets 
+- Xử lý misalignment của GT: sử dụng pseudo-labels với những samples audio có IoU thấp < 0.7 (giữa pseudo-label từ pretrained và GT của BTC)
+- Fine-tune Acoustics models với dataset ở bước 2 và align bằng thuật toán Viterbi forced alignment
+- Post-process blank giữa dự đoán của 2 từ liên kề
+
+- - -
+
 # Zalo AI Challenge 2022 - Lyric Alignment
 
 This is a solution for track Lyric Alignment - From VTS-HTML (TOP 3 Private test Zalo AI Challenge)
